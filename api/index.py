@@ -11,6 +11,9 @@ def text_to_number(text):
     # Remove any non-alphanumeric characters and convert to lowercase
     text = re.sub(r'[^a-zA-Z\s-]', '', text.lower())
     
+    # Strip leading and trailing whitespace
+    text = text.strip()
+    
     # Special case for zero
     if text in ['zero', 'nil']:
         return 0
